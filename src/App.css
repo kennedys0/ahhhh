@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'DarlingCoffee';
+  src: url('../src/fonts/Darling-Coffee.ttf') format('truetype'); /* Sesuaikan path dengan lokasi file .ttf Anda */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hazelnut';
+  src: url('../src/fonts/Hazelnut-Milk-Tea-Bold.ttf') format('truetype'); /* Sesuaikan path dengan lokasi file .ttf Anda */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'VanillaCake';
+  src: url('../src/fonts/Vanilla-Cake.ttf') format('truetype'); /* Sesuaikan path dengan lokasi file .ttf Anda */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background-image: url('./images/Background.png');
+  background-size: cover; /* or contain, depending on your needs */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  max-height: 1080px;
+  padding: 20px;
+}
+
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  max-height: 1080px;
+  padding: 20px;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.logo h1 {
+  font-family: 'DarlingCoffee';
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* atur jarak garis bawah dari teks */
+  overflow: hidden; /* agar garis bawah animasi tidak muncul sebelumnya */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0; /* mulai dengan lebar 0 */
+  height: 2px; /* ketebalan garis bawah */
+  background-color: #007bff; /* warna garis bawah */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease; /* animasi transisi lebar */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* lebar menjadi 100% saat dihover */
+}
+
+/* Animasi sliding */
+@keyframes slideIn {
+  from {
+      transform: scaleX(0); /* mulai dari skala 0 */
+      transform-origin: left; /* titik asal transisi di kiri */
+  }
+  to {
+      transform: scaleX(1); /* skala menjadi 1 */
+      transform-origin: right; /* titik asal transisi di kanan */
+  }
+}
+
+.nav-link:hover::after {
+  animation: slideIn 0.3s forwards; /* jalankan animasi saat dihover */
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  margin-left: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'DarlingCoffee';
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  flex-basis: 50%;
+  font-family: 'VanillaCake';
+}
+
+.join-presale-button {
+  background-color: #7C069F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: 'Hazelnut';
+}
+
+.join-presale-button:hover {
+  background-color: #290651;
+}
+
+.illustration {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tokenomics-chart {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.App-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+.tokenomics h1 {
+  font-size: 60px;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-family: 'DarlingCoffee';
+  margin-bottom: 40px;
+}
+
+.chart-container {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .App-header .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .App-main{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .App-nav ul {
+    flex-direction: column;
+  }
+  .App-nav li {
+    margin-right: 0;
+  }
+  .connect-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  .content {
+    width: 70%;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.2rem;
+  }
+  .join-presale-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  .illustration {
+    width: 40%;
+  }
+  .tokenomics-chart {
+    height: 200px;
+  }
+  .tokenomics h1 {
+    font-size: 40px;
+  }
+
+
+
+@media (max-width: 480px) {
+  .App-header .logo {
+    width: 30px;
+    height: 30px;
+  }
+  .App-main{
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .App-nav ul {
+    flex-direction: column;
+  }
+  .App-nav li {
+    margin-right: 0;
+  }
+  .connect-button {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+  .content {
+    width: 80%;
+  }
+  .content h1 {
+    font-size: 1.5rem
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .join-presale-button {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+  .illustration {
+    width: 35%;
+  }
+  .tokenomics-chart {
+    height: 150px;
+  }
+  .tokenomics h1 {
+    font-size: 25px;
+  }
+}
+
+}
