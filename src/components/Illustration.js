@@ -1,5 +1,5 @@
 import React from 'react';
-import YubiCat from '../images/cat.png'
+import YubiCat from '../images/cat.svg'
 
 const Illustration = () => {
   return (

@@ -50,7 +50,7 @@ function Navbar() {
                 </Link>
                 <Link
                     className="nav-link"
-                    to="faqs"
+                    to="faq"
                     spy={true}
                     smooth={true}
                     duration={500}

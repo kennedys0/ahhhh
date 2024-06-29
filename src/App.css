@@ -150,13 +150,11 @@ body {
   object-fit: contain;
 }
 
-.tokenomics-chart {
+.chart-container {
   width: 100%;
-  height: 300px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
+  margin: 0 auto; /* Untuk memusatkan chart */
+  position: relative;
+  justify-content: center;
 }
 
 .App-footer {
@@ -167,20 +165,157 @@ body {
   clear: both;
 }
 
+.tokenomics {
+  max-width: 1604px;
+}
+
 .tokenomics h1 {
   font-size: 60px;
   color: #fff;
   border-bottom: 3px solid #fff;
   display: inline-block;
   font-family: 'DarlingCoffee';
-  margin-bottom: 40px;
+  margin-top: 30px;
+  justify-content: center;
 }
 
 .chart-container {
-  width: 1920px;
+  width: 1604px;
   height: 1080px;
   position: relative;
   margin: auto;
+}
+
+.acc-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.a-container {
+  width: 100%;
+  max-width: 800px;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-select:none
+}
+.a-container:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.q-container {
+  display: flex;
+  align-items: center;
+  font-family: 'DarlingCoffee';
+  text-align: center;
+  justify-content: center;
+}
+
+.q-title {
+  padding: 10px 20px;
+  font-family: 'DarlingCoffee';
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-title {
+  font-family: 'DarlingCoffee'; /* Menggunakan font DarlingCoffee */
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+.faq-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 3px solid #fff; /* Menggunakan warna hitam untuk garis bawah */
+}
+
+button {
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.a-content {
+  padding-bottom: 10px;
+  font-family: 'Hazelnut';
+}
+
+.footer {
+  background-color: transparent;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-family: 'DarlingCoffee';
+}
+
+.footer-section p, .footer-section a {
+  font-size: 16px;
+  color: #ddd;
+  text-decoration: none;
+  font-family: 'Hazelnut';
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: 'Hazelnut';
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    margin-right: 6px;
+  }
 }
 
 
@@ -191,12 +326,6 @@ body {
     width: 50px;
     height: 50px;
   }
-  .App-main{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
   .App-nav ul {
     flex-direction: column;
   }
@@ -206,6 +335,19 @@ body {
   .connect-button {
     padding: 5px 10px;
     font-size: 14px;
+  }
+  .App-main{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .illustration img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   .content {
     width: 70%;
@@ -223,13 +365,37 @@ body {
   .illustration {
     width: 40%;
   }
-  .tokenomics-chart {
-    height: 200px;
+  .chart-container {
+    width: 50%;
   }
   .tokenomics h1 {
     font-size: 40px;
   }
+  .q-title {
+    font-size: 16px;
+  }
 
+  .a-content {
+    font-size: 14px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    text-align: center;
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
 
 
 @media (max-width: 480px) {
@@ -269,11 +435,15 @@ body {
   .illustration {
     width: 35%;
   }
-  .tokenomics-chart {
-    height: 150px;
+  .chart-container {
+    width: 20%;
   }
-  .tokenomics h1 {
-    font-size: 25px;
+  .q-title {
+    font-size: 14px;
+  }
+
+  .a-content {
+    font-size: 12px;
   }
 }
 
