@@ -30,11 +30,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Main />    
-    <div style={appStyle}>
-    <div style={containerStyle}>
-      <Tokenomics />
-    </div>
-    </div>
+
       <Footer />
     </div>
   );
