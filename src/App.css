@@ -46,9 +46,10 @@ body {
   margin: 0 auto;
   max-width: 1920px;
   max-height: 1080px;
-  padding: 20px;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
+  padding: 10px;
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+  height: auto;
 }
 
 .logo h1 {
@@ -125,7 +126,7 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 30px;
   cursor: pointer;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -137,24 +138,25 @@ body {
 }
 
 .illustration {
-  width: 50%;
-  height: auto;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .illustration img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 
 .chart-container {
   width: 100%;
   margin: 0 auto; /* Untuk memusatkan chart */
-  position: relative;
   justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Optional padding */
+  box-sizing: border-box;
 }
 
 .App-footer {
@@ -166,7 +168,12 @@ body {
 }
 
 .tokenomics {
-  max-width: 1604px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure that elements are stacked vertically */
+  text-align: center;
+
 }
 
 .tokenomics h1 {
@@ -175,15 +182,16 @@ body {
   border-bottom: 3px solid #fff;
   display: inline-block;
   font-family: 'DarlingCoffee';
-  margin-top: 30px;
-  justify-content: center;
+  margin-top: 14rem;
+
 }
 
-.chart-container {
-  width: 1604px;
-  height: 1080px;
-  position: relative;
-  margin: auto;
+
+.chart-container > div {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .acc-container{
@@ -255,6 +263,7 @@ body {
 button {
   border-radius: 5px;
   border-style: solid;
+  order: 2;
 }
 
 .a-content {
@@ -342,13 +351,15 @@ button {
     margin-bottom: 2rem;
     margin-top: 2rem;
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .illustration img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  .illustration {
+    justify-content: center;
+    margin-top: 20px;
+    display: none;
   }
+
   .content {
     width: 70%;
   }
@@ -365,11 +376,12 @@ button {
   .illustration {
     width: 40%;
   }
-  .chart-container {
-    width: 50%;
+  .tokenomics {
+    height: 700px;
   }
   .tokenomics h1 {
     font-size: 40px;
+    padding-bottom: 10px;
   }
   .q-title {
     font-size: 16px;
@@ -384,6 +396,10 @@ button {
     text-align: center;
   }
 
+  .chart-container {
+    margin: 0 auto;
+  }
+
   .footer {
     margin-top: 2rem;
     text-align: center;
@@ -395,6 +411,18 @@ button {
 
   .footer-section {
     margin: 20px 0;
+  }
+
+  .join-presale-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure the container takes full width */
+    padding: 10px; /* Optional padding for better spacing */
+  }
+  .join-presale-button {
+    font-size: 25px; /* Increased font size */
   }
 
 
@@ -435,15 +463,41 @@ button {
   .illustration {
     width: 35%;
   }
-  .chart-container {
-    width: 20%;
+  .tokenomics h1 {
+    padding-bottom: 10px;
+  }
+  .tokenomics {
+    height: 700px;
   }
   .q-title {
     font-size: 14px;
   }
+  .chart-container {
+    margin: 0 auto;
+    font-size: 17px;
+  }
 
   .a-content {
     font-size: 12px;
+  }
+  .join-presale-button {
+    display: flex;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .join-presale-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure the container takes full width */
+    padding: 10px; /* Optional padding for better spacing */
+  }
+
+  .join-presale-button {
+    font-size: 27px; /* Increased font size */
   }
 }
 

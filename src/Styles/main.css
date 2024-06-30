@@ -23,7 +23,6 @@ header {
 	color: #fff;
     border-bottom: 3px solid #ccc; /* Add a bottom border */
     background-color: transparent;
-
 }
 
 nav a {
@@ -32,6 +31,7 @@ nav a {
 	text-decoration: none;
     font-size: 20px;
 	font-family: 'DarlingCoffee';
+	z-index: 1000;
 }
 
 nav a:hover {
@@ -86,6 +86,7 @@ nav {
 		gap: 1.5rem;
 		background-color: #290651;
 		transition: 1s;
+		z-index: 1000;
 	}
 
 	header .responsive_nav {

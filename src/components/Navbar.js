@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import '../Styles/main.css';
 import Yubi from '../images/YUBI CAT LOGO.png';
+import '../Styles/main.css'
 
 function Navbar() {
     const navRef = React.useRef();

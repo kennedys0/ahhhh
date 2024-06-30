@@ -36,7 +36,7 @@ const ChartTokenomics = () => {
       responsive: true,
         plugins: {
             legend: {
-              position: 'left',
+              position: 'bottom',
                 labels: {
                     font: {
                         size: 25,
@@ -44,6 +44,7 @@ const ChartTokenomics = () => {
                         weight: 'bold'
                     },
                     color: '#fff' // Warna hitam
+
                 }
             }
         }
@@ -51,7 +52,7 @@ const ChartTokenomics = () => {
 
     return (
       <div className="chart-container">
-      <div style={{ height: '700px', width:'700px' }}>
+      <div style={{ width:'700px' }}>
           <Pie data={data} options={options} />
       </div>
   </div>

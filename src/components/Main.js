@@ -10,7 +10,9 @@ const Main = () => {
         <p>Welcome to the world of Yubi, a revolutionary digital currency designed for the meme-loving community and beyond.</p>
         <JoinPresaleButton />
       </div>
-      <Illustration />
+      <div>
+        <Illustration />
+      </div>
     </main>
   );
 };
