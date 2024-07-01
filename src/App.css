@@ -184,7 +184,7 @@ body {
   display: flex;
   align-items: center;
   height: 100vh; /* Full viewport height */
-  padding: 20px; /* Optional padding */
+  padding: 10px; /* Optional padding */
   box-sizing: border-box;
 }
 
@@ -215,6 +215,13 @@ body {
 
 }
 
+.tokenomics h2 {
+  font-size: 50px;
+  color: #fff;
+  font-family: 'Hazelnut', bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 
 .chart-container > div {
   max-width: 100%;
@@ -271,7 +278,6 @@ body {
 .faq-title-container {
   text-align: center;
   margin-bottom: 20px;
-  border-top: 3px solid #fff;
   padding-top: 30px;
 }
 
@@ -281,7 +287,7 @@ body {
   position: relative;
   display: inline-block;
   color: #fff;
-
+  margin-bottom: 40px;
 }
 
 .faq-title::after {
@@ -408,12 +414,14 @@ button {
     font-size: 14px;
   }
   .App-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
     margin-bottom: 2rem;
     margin-top: 2rem;
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .illustration {
@@ -446,6 +454,12 @@ button {
     font-size: 40px;
     padding-bottom: 10px;
   }
+  .tokenomics h2{
+    font-size: 25px;
+  }
+  .faq-title {
+    font-size: 40px;
+  }
   .q-title {
     font-size: 16px;
   }
@@ -470,6 +484,10 @@ button {
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .footer p {
+    padding-bottom: 15px;
   }
 
   .footer-section {
@@ -510,6 +528,9 @@ button {
     padding: 7px;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .App-nav ul {
     flex-direction: column;
