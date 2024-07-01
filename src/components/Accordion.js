@@ -7,8 +7,8 @@ export function Accordion() {
   return (
     <>
 
-      <div className="faq-title-container" id="faq">
-          <h1 className="faq-title">FAQs</h1>
+      <div className="faq-title-container">
+          <h1 className="faq-title" id="faq">FAQs</h1>
       </div>
         {Questions.map((question, index) => (
 
