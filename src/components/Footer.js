@@ -1,17 +1,17 @@
 import React from 'react';
+import Yubi from '../images/YUBI CAT LOGO.png'
+
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section">
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Yubi</h3>
+                    <p>Welcome to the world of Yubi, a revolutionary digital currency designed for the meme-loving community and beyond.</p>
                 </div>
                 <div className="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: example@example.com</p>
-                    <p>Phone: +1234567890</p>
+                    <img src={Yubi} alt="Yubi Logo" className="footer-logo" />
                 </div>
                 <div className="footer-section">
                     <h3>Follow Us</h3>
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Your Company. All rights reserved.</p>
+                <p>&copy; 2024 Yubi. All rights reserved.</p>
             </div>
         </footer>
     );

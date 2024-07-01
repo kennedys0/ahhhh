@@ -17,6 +17,24 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #290651; /* Warna track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7C069F; /* Warna thumb scrollbar */
+  border-radius: 3px; /* Membuat ujung thumb scrollbar melengkung */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C069F; /* Warna thumb scrollbar saat di-hover */
+}
+
+
 
 body {
   background-image: url('./images/Background.png');
@@ -122,19 +140,30 @@ body {
 }
 
 .join-presale-button {
-  background-color: #7C069F;
+  background-color: transparent;
   color: #fff;
-  border: none;
+  border: 2px solid #fff;
   padding: 10px 20px;
   font-size: 30px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 20px;
   font-family: 'Hazelnut';
+  transition: background-color 0.3s ease;
 }
 
-.join-presale-button:hover {
-  background-color: #290651;
+.join-presale-button::after {
+  content: 'JOIN PRESALE';
+  display: block;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.join-presale-button:hover::after {
+  content: 'COMING SOON';
+  opacity: 1;
 }
 
 .illustration {
@@ -200,6 +229,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 20px 0;
+
 }
 
 .a-container {
@@ -208,7 +238,7 @@ body {
   color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 20px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -241,14 +271,17 @@ body {
 .faq-title-container {
   text-align: center;
   margin-bottom: 20px;
+  border-top: 3px solid #fff;
+  padding-top: 30px;
 }
 
 .faq-title {
   font-family: 'DarlingCoffee'; /* Menggunakan font DarlingCoffee */
-  font-size: 36px;
+  font-size: 60px;
   position: relative;
   display: inline-block;
   color: #fff;
+
 }
 
 .faq-title::after {
@@ -277,6 +310,7 @@ button {
   padding: 40px 0;
   text-align: center;
   margin-top: 60px;
+  border-top: 3px solid #fff;
 }
 
 .footer-container {
@@ -310,10 +344,38 @@ button {
   color: #fff;
 }
 
+.footer-logo {
+  max-width: 150px; /* Sesuaikan ukuran logo */
+  margin-top: 10px;
+}
+
 .footer-bottom {
   margin-top: 20px;
   font-size: 14px;
   font-family: 'Hazelnut';
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.back-to-top button {
+  background-color: #7C069F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top button:hover {
+  opacity: 1;
 }
 
 @media (max-width: 400px) {
@@ -378,6 +440,7 @@ button {
   }
   .tokenomics {
     height: 700px;
+    padding-bottom: 30px;
   }
   .tokenomics h1 {
     font-size: 40px;
@@ -424,6 +487,17 @@ button {
   .join-presale-button {
     font-size: 25px; /* Increased font size */
   }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+}
+
+.back-to-top button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+}
 
 
 @media (max-width: 480px) {
@@ -501,4 +575,3 @@ button {
   }
 }
 
-}
