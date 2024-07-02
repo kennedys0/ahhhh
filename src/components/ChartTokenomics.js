@@ -36,7 +36,7 @@ const ChartTokenomics = () => {
       responsive: true,
         plugins: {
             legend: {
-              position: 'bottom',
+              position: 'left',
                 labels: {
                     font: {
                         size: 25,

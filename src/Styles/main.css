@@ -21,18 +21,19 @@ header {
 	height: 60px;
 	padding: 0 2rem;
 	color: #fff;
-    border-bottom: 3px solid #ccc; /* Add a bottom border */
-    background-color: transparent;
+    border-bottom: 3px solid #ccc;
 	position: fixed; /* Tambahkan ini */
 	width: 100%; /* Pastikan navbar mengambil lebar penuh */
 	top: 0; /* Tetapkan ke bagian atas halaman */
 	left: 0; /* Tetapkan ke kiri halaman */
-	z-index: 1000;
-	backdrop-filter: blur(10px); 
+	z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
+	background-color: transparent;
+	-webkit-backdrop-filter: blur(10px); /* Tambahkan prefiks webkit */
+	backdrop-filter: blur(10px);
 	border-radius: 0 0 15px 15px; /* Menambahkan border-radius di bagian bawah */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
 	z-index: 1000;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease; /* Efek transisi untuk perubahan posisi */
 }
 
 nav a {
